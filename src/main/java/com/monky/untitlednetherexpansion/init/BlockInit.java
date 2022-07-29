@@ -5,6 +5,7 @@ import com.google.common.base.Supplier;
 
 import com.monky.untitlednetherexpansion.UntitledNetherExpansion;
 import com.monky.untitlednetherexpansion.block.MagnetiteBlock;
+import com.monky.untitlednetherexpansion.block.WhiskerBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -28,7 +29,7 @@ public class BlockInit {
             object -> () -> new BlockItem(object.get(),new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
     public static final RegistryObject<Block> WHISPER_BLOCK = register("whisper",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).dynamicShape().sound(SoundType.HANGING_ROOTS)),
+            () -> new WhiskerBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).dynamicShape().sound(SoundType.HANGING_ROOTS)),
             object -> () -> new BlockItem(object.get(),new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(final String name,
