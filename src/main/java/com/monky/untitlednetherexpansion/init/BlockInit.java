@@ -4,9 +4,11 @@ import java.util.function.Function;
 import com.google.common.base.Supplier;
 
 import com.monky.untitlednetherexpansion.UntitledNetherExpansion;
+import com.monky.untitlednetherexpansion.block.MagnetiteBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -21,14 +23,19 @@ public class BlockInit {
     public static final DeferredRegister<Item> ITEMS = ItemInit.ITEMS;
 
     public static final RegistryObject<Block> MAGNETITE_BLOCK = register("magnetite",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f)
-                    .sound(SoundType.METAL).requiresCorrectToolForDrops()),
+            () -> new MagnetiteBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
+                    .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(),new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
+
+    public static final RegistryObject<Block> WHISPER_BLOCK = register("whisper",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).dynamicShape().sound(SoundType.HANGING_ROOTS)),
             object -> () -> new BlockItem(object.get(),new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(final String name,
         final Supplier<? extends T> block) {
         return BLOCKS.register(name, block);
     }
+
 
     private static <T extends Block> RegistryObject<T> register(final String name, final Supplier<? extends T> block,
             Function<RegistryObject<T>, Supplier<? extends Item>> item ) {
