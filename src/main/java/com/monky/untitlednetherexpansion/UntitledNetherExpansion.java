@@ -17,7 +17,6 @@ public class UntitledNetherExpansion {
     public static final String MOD_ID = "untitlednetherexpansion";
 
     public static final CreativeModeTab UNTITLEDNETHER_TAB = new CreativeModeTab(MOD_ID) {
-
         @Override
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
