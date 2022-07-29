@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="MIT"
+[[mods]]
+modId="untitlednetherexpansion"
+version="${file.jarVersion}"
+displayName="Untitled Nether Expansion"
+logoFile="examplemod.png"
+credits="A mod for the Nether that helps to make Lava wastes and Scrap mining exciting by Screem and Monky."
+authors="Monky#8137, Screem#8789"
+description='''
+This mod aims to liven up the frustrating and boring experience of mining for Netherite Scrap and add new dynamics to the neglected parts of the Nether like the Lava wastes in order to deliver a separate experience hidden below the molten magma.
+
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.untitlednetherexpansion]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.untitlednetherexpansion]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"
