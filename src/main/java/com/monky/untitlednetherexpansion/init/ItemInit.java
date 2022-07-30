@@ -16,7 +16,7 @@ public class ItemInit {
             UntitledNetherExpansion.MOD_ID);
 
     public static final RegistryObject<Item> WAYFINDER_ITEM = register("wayfinder",
-            () -> new WayfinderItem(new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB).fireResistant().rarity(Rarity.EPIC)));
+            () -> new WayfinderItem(new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB).fireResistant().rarity(Rarity.UNCOMMON)));
 
     private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
         return ITEMS.register(name, item);

@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "facing=north,lit=true": {
+      "model": "untitlednetherexpansion:block/whisker_block",
+      "y": 90
+    },
+    "facing=south,lit=true": {
+      "model": "untitlednetherexpansion:block/whisker_block",
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "untitlednetherexpansion:block/whisker_block",
+      "y": 0
+    },
+    "facing=east,lit=true": {
+      "model": "untitlednetherexpansion:block/whisker_block",
+      "y": 180
+    },
+    "facing=north,lit=false": {
+      "model": "untitlednetherexpansion:block/whisker_block",
+      "y": 90
+    },
+    "facing=south,lit=false": {
+      "model": "untitlednetherexpansion:block/whisker_block",
+      "y": 270
+    },
+    "facing=west,lit=false": {
+      "model": "untitlednetherexpansion:block/whisker_block",
+      "y": 0
+    },
+    "facing=east,lit=false": {
+      "model": "untitlednetherexpansion:block/whisker_block",
+      "y": 180
+    }
+  }
+}

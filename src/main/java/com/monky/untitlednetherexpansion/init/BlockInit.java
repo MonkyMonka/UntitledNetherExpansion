@@ -28,7 +28,7 @@ public class BlockInit {
                     .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
             object -> () -> new BlockItem(object.get(),new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
-    public static final RegistryObject<Block> WHISPER_BLOCK = register("whisper",
+    public static final RegistryObject<Block> WHISPER_BLOCK = register("whisker.json",
             () -> new WhiskerBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).dynamicShape().sound(SoundType.HANGING_ROOTS)),
             object -> () -> new BlockItem(object.get(),new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
