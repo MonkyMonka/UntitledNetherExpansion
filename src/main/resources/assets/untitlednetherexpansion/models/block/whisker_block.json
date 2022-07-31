@@ -2,8 +2,8 @@
   "credit": "Made with Blockbench",
   "texture_size": [32, 32],
   "textures": {
-    "0": "untitlednetherextension:block/whisker",
-    "particle": "untitlednetherextension:block/whisker"
+    "0": "untitlednetherexpansion:block/whisker_block",
+    "particle": "untitlednetherexpansion:block/whisker_block"
   },
   "elements": [
     {
