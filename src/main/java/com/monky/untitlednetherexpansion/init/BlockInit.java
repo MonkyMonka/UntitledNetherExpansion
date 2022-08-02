@@ -51,12 +51,4 @@ public class BlockInit {
         return obj;
     }
 
-    @Mod.EventBusSubscriber(modid = UntitledNetherExpansion.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class ClientOnly {
-
-        @SubscribeEvent
-        public static void setCutoutLayer(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(WHISPER_BLOCK.get(), RenderType.cutoutMipped());
-        }
-    }
 }
