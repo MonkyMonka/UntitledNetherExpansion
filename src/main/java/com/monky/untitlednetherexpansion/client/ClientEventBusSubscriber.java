@@ -15,6 +15,6 @@ public class ClientEventBusSubscriber {
 
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event){
-        ItemBlockRenderTypes.setRenderLayer(BlockInit.WHISPER_BLOCK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.WHISKER_BLOCK.get(), RenderType.cutout());
     }
 }
