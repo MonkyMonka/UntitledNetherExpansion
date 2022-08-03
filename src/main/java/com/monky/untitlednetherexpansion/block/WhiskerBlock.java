@@ -1,5 +1,6 @@
 package com.monky.untitlednetherexpansion.block;
 
+import com.monky.untitlednetherexpansion.init.TagInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
@@ -83,10 +84,14 @@ public class WhiskerBlock extends Block {
                                  BlockHitResult result) {
 
         if (!world.isClientSide()) {
+            if (player.getItemInHand(hand).is(TagInit.Items.COOL_ITEMS)) {
                 world.setBlock(pos, state.cycle(LIT), 4);
                 return InteractionResult.CONSUME;
             }
-        return InteractionResult.PASS;
+        }
+        return super.use(state, world, pos, player, hand, result);
     }
+
+
 }
 
