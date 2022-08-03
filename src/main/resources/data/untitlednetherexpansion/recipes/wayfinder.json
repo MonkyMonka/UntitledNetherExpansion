@@ -1,0 +1,23 @@
+    {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        " # ",
+        "gCg",
+        " # "
+      ],
+      "key": {
+        "#": {
+          "item": "minecraft:netherite_scrap"
+        },
+        "g": {
+          "item": "minecraft:gold_ingot"
+        },
+        "C": {
+          "item": "minecraft:crying_obsidian"
+        }
+      },
+      "result": {
+        "item": "untitlednetherextension:wayfinder",
+        "count": 1
+      }
+    }
