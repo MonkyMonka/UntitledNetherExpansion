@@ -6,8 +6,6 @@ import com.google.common.base.Supplier;
 import com.monky.untitlednetherexpansion.UntitledNetherExpansion;
 import com.monky.untitlednetherexpansion.block.MagnetiteBlock;
 import com.monky.untitlednetherexpansion.block.WhiskerBlock;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -16,10 +14,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -34,7 +28,7 @@ public class BlockInit {
                     .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
-    public static final RegistryObject<Block> WHISPER_BLOCK = register("whisker",
+    public static final RegistryObject<Block> WHISKER_BLOCK = register("whisker",
             () -> new WhiskerBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).dynamicShape().sound(SoundType.HANGING_ROOTS)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
