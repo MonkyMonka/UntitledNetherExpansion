@@ -35,7 +35,7 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', 'untitlednetherexpansion'
 
             mods {
                 untitlednetherexpansion {
@@ -51,7 +51,7 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', 'untitlednetherexpansion'
 
             mods {
                 untitlednetherexpansion {
@@ -68,7 +68,7 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', 'untitlednetherexpansion'
 
             mods {
                 untitlednetherexpansion {
@@ -84,7 +84,7 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'untitlednetherexpansion', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
                 untitlednetherexpansion {
