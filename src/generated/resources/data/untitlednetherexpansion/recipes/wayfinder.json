@@ -1,11 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " g ",
-    "gng",
+    " n ",
+    "gcg",
     " n "
   ],
   "key": {
+    "c": {
+      "item": "minecraft:crying_obsidian"
+    },
     "n": {
       "item": "minecraft:netherite_scrap"
     },
