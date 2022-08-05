@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "untitlednetherexpansion:block/magnetite_block"
-    }
-}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:basalt"
+    },
+    {
+      "item": "minecraft:basalt"
+    },
+    {
+      "item": "minecraft:basalt"
+    },
+    {
+      "item": "minecraft:basalt"
+    }
+  ],
+  "result": {
+    "item": "untitlednetherexpansion:magnetite_block",
+    "count": 4
+  }
+}

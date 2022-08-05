@@ -2,11 +2,13 @@
   "type": "minecraft:block",
   "pools": [
     {
+      "name": "whisker_block",
       "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "untitlednetherexpansion:magnetite"
+          "name": "untitlednetherexpansion:whisker_block"
         }
       ]
     }

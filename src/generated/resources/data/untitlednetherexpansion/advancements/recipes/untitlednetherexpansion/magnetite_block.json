@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "untitlednetherexpansion:magnetite_block"
+    ]
+  },
+  "criteria": {
+    "has_wayfinder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "untitlednetherexpansion:wayfinder"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "untitlednetherexpansion:magnetite_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wayfinder",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " g ",
+    "gng",
+    " n "
+  ],
+  "key": {
+    "n": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "untitlednetherexpansion:wayfinder"
+  }
+}

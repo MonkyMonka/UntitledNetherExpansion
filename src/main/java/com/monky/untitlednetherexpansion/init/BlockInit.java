@@ -23,12 +23,12 @@ public class BlockInit {
             UntitledNetherExpansion.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = ItemInit.ITEMS;
 
-    public static final RegistryObject<Block> MAGNETITE_BLOCK = register("magnetite",
+    public static final RegistryObject<Block> MAGNETITE_BLOCK = register("magnetite_block",
             () -> new MagnetiteBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
                     .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
-    public static final RegistryObject<Block> WHISKER_BLOCK = register("whisker",
+    public static final RegistryObject<Block> WHISKER_BLOCK = register("whisker_block",
             () -> new WhiskerBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).dynamicShape().sound(SoundType.HANGING_ROOTS)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
