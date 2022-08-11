@@ -28,6 +28,41 @@ public class BlockInit {
                     .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
+    public static final RegistryObject<Block>  POLISHED_MAGNETITE_BLOCK = register("polished_magnetite_block",
+            () -> new MagnetiteBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
+                    .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
+
+    public static final RegistryObject<Block>  POLISHED_MAGNETITE_SLAB = register("polished_magnetite_slab",
+            () -> new MagnetiteBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
+                    .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
+
+    public static final RegistryObject<Block>  POLISHED_MAGNETITE_STAIR = register("polished_magnetite_stair",
+            () -> new MagnetiteBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
+                    .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
+
+    public static final RegistryObject<Block> MAGNETITE_BRICK_BLOCK = register("magnetite_brick_block",
+            () -> new MagnetiteBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
+                    .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
+
+    public static final RegistryObject<Block> MAGNETITE_BRICK_SLAB = register("magnetite_brick_slab",
+            () -> new MagnetiteBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
+                    .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
+
+    public static final RegistryObject<Block> MAGNETITE_BRICK_STAIR = register("magnetite_brick_stair",
+            () -> new MagnetiteBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
+                    .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
+
+    public static final RegistryObject<Block> CHISELED_MAGNETITE_BLOCK = register("chiseled_magnetite_block",
+            () -> new MagnetiteBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
+                    .sound(SoundType.COPPER).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
+
     public static final RegistryObject<Block> WHISKER_BLOCK = register("whisker_block",
             () -> new WhiskerBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).dynamicShape().sound(SoundType.HANGING_ROOTS)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));

@@ -41,6 +41,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Block Items
         simpleBlockItem(BlockInit.MAGNETITE_BLOCK.get().asItem());
+        simpleBlockItem(BlockInit.MAGNETITE_BRICK_BLOCK.get().asItem());
+        simpleBlockItem(BlockInit.CHISELED_MAGNETITE_BLOCK.get().asItem());
+        simpleBlockItem(BlockInit.POLISHED_MAGNETITE_BLOCK.get().asItem());
         simpleBlockItem(BlockInit.WHISKER_BLOCK.get().asItem());
 
         // Simple Items

@@ -2,13 +2,13 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "magnetite_block",
+      "name": "polished_magnetite_block",
       "rolls": 1.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "untitlednetherexpansion:magnetite_block"
+          "name": "untitlednetherexpansion:polished_magnetite_block"
         }
       ]
     }

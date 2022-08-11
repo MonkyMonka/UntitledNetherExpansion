@@ -15,7 +15,9 @@ public class ModLootTableProvider extends BaseLootTableProvider {
     @Override
     protected void addTables() {
         dropSelf(BlockInit.WHISKER_BLOCK.get());
-        dropSelf(BlockInit.MAGNETITE_BLOCK.get());
+        dropSelf(BlockInit.MAGNETITE_BRICK_BLOCK.get());
+        dropSelf(BlockInit.POLISHED_MAGNETITE_BLOCK.get());
+        dropSelf(BlockInit.CHISELED_MAGNETITE_BLOCK.get());
         //For silktouch: silkTouch(BlockInit.ROTATABLE_BLOCK.get(), ItemInit.EXAMPLE_ITEM.get(), 1, 4);
     }
 
