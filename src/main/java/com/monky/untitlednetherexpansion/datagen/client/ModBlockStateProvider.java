@@ -7,6 +7,8 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.AttachFace;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -49,12 +51,31 @@ public class ModBlockStateProvider extends BlockStateProvider {
         getVariantBuilder(blockRegistryObject.get()).partialState().with(PressurePlateBlock.POWERED, true).modelForState().modelFile(pressurePlateDown).addModel().partialState().with(PressurePlateBlock.POWERED, false).modelForState().modelFile(pressurePlateUp).addModel();
     }
 
+    @SuppressWarnings( "deprecation" )
+    public void slabBlock(RegistryObject<Block> blockRegistryObject) {
+        String name = Registry.BLOCK.getKey(blockRegistryObject.get()).getPath();
+        String baseName = name.substring(0, name.length() - 5);
+        slabBlock((SlabBlock) blockRegistryObject.get(), new ResourceLocation(UntitledNetherExpansion.MOD_ID, (baseName + "_block")), new ResourceLocation(UntitledNetherExpansion.MOD_ID, ("block/" + baseName + "_block")));
+    }
+
+
+    @SuppressWarnings( "deprecation" )
+    public void stairsBlock(RegistryObject<Block> blockRegistryObject) {
+        String name = Registry.BLOCK.getKey(blockRegistryObject.get()).getPath();
+        String baseName = name.substring(0, name.length() - 6);
+        stairsBlock((StairBlock) blockRegistryObject.get(), new ResourceLocation(UntitledNetherExpansion.MOD_ID, ("block/" + baseName + "_block")));
+    }
+
     @Override
     protected void registerStatesAndModels() {
         simpleBlock(BlockInit.MAGNETITE_BLOCK.get());
-        simpleBlock(BlockInit.MAGNETITE_BRICK_BLOCK.get());
         simpleBlock(BlockInit.CHISELED_MAGNETITE_BLOCK.get());
+        simpleBlock(BlockInit.MAGNETITE_BRICK_BLOCK.get());
+        slabBlock(BlockInit.MAGNETITE_BRICK_SLAB);
+        stairsBlock(BlockInit.MAGNETITE_BRICK_STAIR);
         simpleBlock(BlockInit.POLISHED_MAGNETITE_BLOCK.get());
+        stairsBlock(BlockInit.POLISHED_MAGNETITE_STAIR);
+        slabBlock(BlockInit.POLISHED_MAGNETITE_SLAB);
 
     }
 

@@ -2,7 +2,11 @@
   "block.untitlednetherexpansion.chiseled_magnetite_block": "Chiseled Magnetite",
   "block.untitlednetherexpansion.magnetite_block": "Magnetite",
   "block.untitlednetherexpansion.magnetite_brick_block": "Magnetite Bricks",
+  "block.untitlednetherexpansion.magnetite_brick_slab": "Magnetite Brick Slabs",
+  "block.untitlednetherexpansion.magnetite_brick_stair": "Magnetite Brick Stairs",
   "block.untitlednetherexpansion.polished_magnetite_block": "Polished Magnetite",
+  "block.untitlednetherexpansion.polished_magnetite_slab": "Polished Magnetite Slabs",
+  "block.untitlednetherexpansion.polished_magnetite_stair": "Polished Magnetite Stairs",
   "block.untitlednetherexpansion.whisker_block": "Whisker",
   "item.untitlednetherexpansion.wayfinder": "Wayfinder",
   "itemGroup.untitlednetherexpansion": "Untitled Nether Expansion Tab"

@@ -26,7 +26,11 @@ public class ModEnUsProvider extends LanguageProvider {
         add(BlockInit.MAGNETITE_BLOCK.get(), "Magnetite");
         add(BlockInit.CHISELED_MAGNETITE_BLOCK.get(), "Chiseled Magnetite");
         add(BlockInit.POLISHED_MAGNETITE_BLOCK.get(), "Polished Magnetite");
+        add(BlockInit.POLISHED_MAGNETITE_SLAB.get(), "Polished Magnetite Slabs");
+        add(BlockInit.POLISHED_MAGNETITE_STAIR.get(), "Polished Magnetite Stairs");
         add(BlockInit.MAGNETITE_BRICK_BLOCK.get(), "Magnetite Bricks");
+        add(BlockInit.MAGNETITE_BRICK_SLAB.get(), "Magnetite Brick Slabs");
+        add(BlockInit.MAGNETITE_BRICK_STAIR.get(), "Magnetite Brick Stairs");
         add(BlockInit.WHISKER_BLOCK.get(), "Whisker");
     }
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "untitlednetherexpansion:block/polished_magnetite_slab_top"
+    },
+    "type=bottom": {
+      "model": "untitlednetherexpansion:block/polished_magnetite_slab"
+    },
+    "type=double": {
+      "model": "untitlednetherexpansion:block/polished_magnetite_block"
+    }
+  }
+}

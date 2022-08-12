@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "side": "untitlednetherexpansion:block/polished_magnetite_block",
+    "bottom": "untitlednetherexpansion:block/polished_magnetite_block",
+    "top": "untitlednetherexpansion:block/polished_magnetite_block"
+  }
+}
