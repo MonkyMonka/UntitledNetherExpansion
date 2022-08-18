@@ -7,6 +7,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.nbt.NbtUtils;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -30,11 +31,14 @@ public class WayfinderItem extends CompassItem {
     public WayfinderItem(Properties properties) {
         super(properties);
     }
-
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-        tooltip.add(Component.nullToEmpty("A non-attuned wayfinder"));
-
+        if (isLodestoneCompass(stack)) {
+            tooltip.add(new TranslatableComponent("item.untitlednetherexpansion.attuned_wayfinder.desc"));
+        }
+        else {
+            tooltip.add(new TranslatableComponent("item.untitlednetherexpansion.nonattuned_wayfinder.desc"));
+        }
         super.appendHoverText(stack, worldIn, tooltip, flagIn);
     }
 
