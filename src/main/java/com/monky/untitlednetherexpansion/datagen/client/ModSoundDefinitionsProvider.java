@@ -16,8 +16,10 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
     public void registerSounds() {
 
         this.add(SoundEventsInit.WAYFINDER_CHARGE, definition().with(
-                sound("untitlednetherexpansion:wayfinder/charge_1"),
-                sound("untitlednetherexpansion:wayfinder/charge_2")
+                sound("untitlednetherexpansion:item/charge_1"),
+                sound("untitlednetherexpansion:item/charge_2"),
+                sound("untitlednetherexpansion:item/charge_3"),
+                sound("untitlednetherexpansion:item/charge_4")
         ).subtitle("subtitles.item.wayfinder_charge"));
 
     }
