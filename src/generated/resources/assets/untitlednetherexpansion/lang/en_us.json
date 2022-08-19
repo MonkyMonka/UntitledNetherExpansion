@@ -9,8 +9,8 @@
   "block.untitlednetherexpansion.polished_magnetite_stair": "Polished Magnetite Stairs",
   "block.untitlednetherexpansion.whisker_block": "Whisker",
   "item.untitlednetherexpansion.wayfinder": "Wayfinder",
+  "item.untitlednetherexpansion.wayfinder_attuned.desc": "An attuned Wayfinder, Instantly teleport to the affixed destination upon consumption",
+  "item.untitlednetherexpansion.wayfinder_unattuned.desc": "A non-attuned Wayfinder",
   "itemGroup.untitlednetherexpansion": "Untitled Nether Expansion Tab",
-  "A non-attuned wayfinder": "nonattuned.wayfinder",
-  "item.untitlednetherexpansion.nonattuned_wayfinder.desc": "A non-attuned Wayfinder",
-  "item.untitlednetherexpansion.attuned_wayfinder.desc": "An attuned Wayfinder, Instantly teleport to the affixed destination upon consumption"
+  "subtitles.item.wayfinder_charge": "Wayfinder is charged"
 }

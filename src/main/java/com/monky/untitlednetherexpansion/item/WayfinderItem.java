@@ -34,10 +34,10 @@ public class WayfinderItem extends CompassItem {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
         if (isLodestoneCompass(stack)) {
-            tooltip.add(new TranslatableComponent("item.untitlednetherexpansion.attuned_wayfinder.desc"));
+            tooltip.add(new TranslatableComponent("item.untitlednetherexpansion.wayfinder_attuned.desc"));
         }
         else {
-            tooltip.add(new TranslatableComponent("item.untitlednetherexpansion.nonattuned_wayfinder.desc"));
+            tooltip.add(new TranslatableComponent("item.untitlednetherexpansion.wayfinder_unattuned.desc"));
         }
         super.appendHoverText(stack, worldIn, tooltip, flagIn);
     }
@@ -92,6 +92,7 @@ public class WayfinderItem extends CompassItem {
         Level.RESOURCE_KEY_CODEC.encodeStart(NbtOps.INSTANCE, pLodestoneDimension).resultOrPartial(UntitledNetherExpansion.LOGGER::error).ifPresent((p_40731_) -> {
             pCompoundTag.put("LodestoneDimension", p_40731_);
         });
+
         pCompoundTag.putBoolean("LodestoneTracked", true);
 
         }
