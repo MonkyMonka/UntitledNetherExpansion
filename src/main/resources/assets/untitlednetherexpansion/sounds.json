@@ -1,0 +1,11 @@
+{
+  "wayfinder_charge": {
+    "sounds": ["untitlednetherexpansion:wayfinder/charge_1","untitlednetherexpansion:wayfinder/charge_2","untitlednetherexpansion:wayfinder/charge_3","untitlednetherexpansion:wayfinder/charge_4"]
+  },
+  "wayfinder_teleport_in": {
+    "sounds": ["untitlednetherexpansion:wayfinder/teleport_in_1","untitlednetherexpansion:wayfinder/teleport_in_2"]
+  },
+  "wayfinder_teleport_out": {
+    "sounds": ["untitlednetherexpansion:wayfinder/teleport_out"]
+  }
+}
