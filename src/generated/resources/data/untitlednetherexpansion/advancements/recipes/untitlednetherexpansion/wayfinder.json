@@ -6,13 +6,25 @@
     ]
   },
   "criteria": {
-    "has_magnetite_block": {
+    "has_crying_obsidian": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "untitlednetherexpansion:magnetite_block"
+              "minecraft:crying_obsidian"
+            ]
+          }
+        ]
+      }
+    },
+    "has_netherite_scrap": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:netherite_scrap"
             ]
           }
         ]
@@ -27,7 +39,8 @@
   },
   "requirements": [
     [
-      "has_magnetite_block",
+      "has_crying_obsidian",
+      "has_netherite_scrap",
       "has_the_recipe"
     ]
   ]

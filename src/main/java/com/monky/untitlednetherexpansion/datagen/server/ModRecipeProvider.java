@@ -28,7 +28,8 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('n', Items.NETHERITE_SCRAP.asItem())
                 .define('g', Items.GOLD_INGOT.asItem())
                 .pattern(" n ").pattern("gcg").pattern(" n ")
-                .unlockedBy("has_" + BlockInit.MAGNETITE_BLOCK.get().getRegistryName().getPath(), has(BlockInit.MAGNETITE_BLOCK.get().asItem()))
+                .unlockedBy("has_" + Items.CRYING_OBSIDIAN.getRegistryName().getPath(), has(Items.CRYING_OBSIDIAN.asItem()))
+                .unlockedBy("has_" + Items.NETHERITE_SCRAP.getRegistryName().getPath(), has(Items.NETHERITE_SCRAP.asItem()))
                 .save(consumer, new ResourceLocation(UntitledNetherExpansion.MOD_ID,
                         ItemInit.WAYFINDER_ITEM.get().getRegistryName().getPath()));
 
