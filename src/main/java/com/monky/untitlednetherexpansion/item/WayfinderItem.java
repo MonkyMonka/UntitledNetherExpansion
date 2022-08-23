@@ -2,22 +2,29 @@ package com.monky.untitlednetherexpansion.item;
 
 import com.monky.untitlednetherexpansion.UntitledNetherExpansion;
 import com.monky.untitlednetherexpansion.init.ItemInit;
+import com.monky.untitlednetherexpansion.init.SoundEventsInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.nbt.NbtUtils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.protocol.game.ClientboundCustomSoundPacket;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CompassItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
@@ -74,15 +81,37 @@ public class WayfinderItem extends CompassItem {
         }
     }
 
+
+    public int getUseDuration(ItemStack stack) {
+        return 72000;
+    }
+
+    public UseAnim getUseAnimation(ItemStack pStack) {
+        return UseAnim.BOW;
+    }
+
+    @Override
+    public void releaseUsing(ItemStack stack, Level level, LivingEntity entity, int timeLeft) {
+        if (entity instanceof ServerPlayer player && isLodestoneCompass(stack)) {
+            player.playSound(SoundEventsInit.WAYFINDER_TELEPORT_OUT.get(), 0.5F, 1.0F);
+            BlockPos pos = NbtUtils.readBlockPos(stack.getTag().getCompound("LodestonePos"));
+            player.teleportTo(player.getLevel(), pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, player.getYRot(), player.getXRot());
+            player.connection.send(new ClientboundCustomSoundPacket(SoundEventsInit.WAYFINDER_TELEPORT_IN.get().getLocation(), SoundSource.PLAYERS, player.getPosition(1.0F), 0.5F, 1.0F ));
+            player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
+            stack.shrink(1);
+
+            player.playSound(SoundEventsInit.WAYFINDER_TELEPORT_OUT.get(), 0.5F, 1.0F);
+        }
+    }
+
+
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-        ItemStack stack = pPlayer.getItemInHand(pUsedHand);
-        if (isLodestoneCompass(stack)) {
-            BlockPos pos = NbtUtils.readBlockPos(stack.getTag().getCompound("LodestonePos"));
-            pPlayer.setPos(pos.getX(), pos.getY(), pos.getZ());
-            stack.shrink(1);
-            return InteractionResultHolder.success(stack);
-        }
+        ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
+        if (isLodestoneCompass(itemStack)) {
+            pPlayer.startUsingItem(pUsedHand);
+            pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEventsInit.WAYFINDER_CHARGE.get(), SoundSource.PLAYERS, 0.5F, 1.0F);
+        } else {}
         return super.use(pLevel, pPlayer, pUsedHand);
     }
 
