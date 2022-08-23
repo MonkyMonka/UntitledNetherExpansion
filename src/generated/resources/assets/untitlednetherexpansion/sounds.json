@@ -1,0 +1,24 @@
+{
+  "item.wayfinder_charge": {
+    "subtitle": "subtitles.item.wayfinder_charge",
+    "sounds": [
+      "untitlednetherexpansion:item/charge_1",
+      "untitlednetherexpansion:item/charge_2",
+      "untitlednetherexpansion:item/charge_3",
+      "untitlednetherexpansion:item/charge_4"
+    ]
+  },
+  "item.wayfinder_teleport_in": {
+    "subtitle": "subtitles.item.wayfinder_teleport_in",
+    "sounds": [
+      "untitlednetherexpansion:item/teleport_in_1",
+      "untitlednetherexpansion:item/teleport_in_2"
+    ]
+  },
+  "item.wayfinder_teleport_out": {
+    "subtitle": "subtitles.item.wayfinder_teleport_out",
+    "sounds": [
+      "untitlednetherexpansion:item/teleport_out"
+    ]
+  }
+}

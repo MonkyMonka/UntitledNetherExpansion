@@ -3,6 +3,7 @@ package com.monky.untitlednetherexpansion.datagen;
 import com.monky.untitlednetherexpansion.UntitledNetherExpansion;
 import com.monky.untitlednetherexpansion.datagen.client.ModBlockStateProvider;
 import com.monky.untitlednetherexpansion.datagen.client.ModItemModelProvider;
+import com.monky.untitlednetherexpansion.datagen.client.ModSoundDefinitionsProvider;
 import com.monky.untitlednetherexpansion.datagen.client.lang.ModEnUsProvider;
 import com.monky.untitlednetherexpansion.datagen.server.ModBlockTagsProvider;
 import com.monky.untitlednetherexpansion.datagen.server.ModItemTagsProvider;
@@ -28,6 +29,7 @@ public class DataGeneration {
             generator.addProvider(new ModBlockStateProvider(generator, helper));
             generator.addProvider(new ModItemModelProvider(generator, helper));
             generator.addProvider(new ModEnUsProvider(generator));
+            generator.addProvider(new ModSoundDefinitionsProvider(generator, helper));
         }
 
         if (event.includeServer()) {
