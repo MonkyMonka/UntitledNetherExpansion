@@ -31,6 +31,11 @@ public class ModSoundDefinitionsProvider extends SoundDefinitionsProvider {
                 sound("untitlednetherexpansion:item/teleport_out")
         ).subtitle("subtitles.item.wayfinder_teleport_out"));
 
+        this.add(SoundEventsInit.WAYFINDER_LOCK, definition().with(
+                sound("untitlednetherexpansion:item/lock1"),
+                sound("untitlednetherexpansion:item/lock2")
+        ).subtitle("subtitles.item.wayfinder_lock"));
+
 
     }
 }

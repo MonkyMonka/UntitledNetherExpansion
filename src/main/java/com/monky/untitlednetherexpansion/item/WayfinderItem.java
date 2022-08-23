@@ -57,7 +57,7 @@ public class WayfinderItem extends CompassItem {
         if (!level.getBlockState(blockpos).is(Blocks.LODESTONE)) {
             return super.useOn(pContext);
         } else {
-            level.playSound(null, blockpos, SoundEvents.LODESTONE_COMPASS_LOCK, SoundSource.PLAYERS, 1.0F, 1.0F);
+            level.playSound(null, blockpos, SoundEventsInit.WAYFINDER_LOCK.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
             Player player = pContext.getPlayer();
             ItemStack itemstack = pContext.getItemInHand();
             boolean flag = !player.getAbilities().instabuild && itemstack.getCount() == 1;

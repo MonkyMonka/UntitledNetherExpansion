@@ -20,5 +20,12 @@
     "sounds": [
       "untitlednetherexpansion:item/teleport_out"
     ]
+  },
+  "item.wayfinder_lock": {
+    "subtitle": "subtitles.item.wayfinder_lock",
+    "sounds": [
+      "untitlednetherexpansion:item/lock1",
+      "untitlednetherexpansion:item/lock2"
+    ]
   }
 }

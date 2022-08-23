@@ -43,6 +43,7 @@ public class ModEnUsProvider extends LanguageProvider {
         addSubtitle("item", "wayfinder_charge", "Wayfinder is charged");
         addSubtitle("item", "wayfinder_teleport_in", "Wayfinder is used to teleport the player");
         addSubtitle("item", "wayfinder_teleport_out", "A Wayfinder is used to teleport a player nearby");
+        addSubtitle("item", "wayfinder_lock", "Wayfinder locks onto Lodestone");
 
 
     }
