@@ -27,8 +27,14 @@ public class ModEnUsProvider extends LanguageProvider {
         add(ItemInit.WAYFINDER_ITEM.get(), "Wayfinder");
         add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_unattuned.desc", "A non-attuned Wayfinder");
         add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_attuned.desc", "An attuned Wayfinder, Instantly teleport to the affixed destination upon consumption");
+        add(ItemInit.DUNKLE_SHELL_ITEM.get(), "Dunkle Shell");
+        add(ItemInit.VESSEL_ITEM.get(), "Vessel");
+        add(ItemInit.MAGNETIC_BAND_ITEM.get(), "Magnetic Band");
+        add(ItemInit.MAGNETIC_MISSILE_ITEM.get(), "Magnetic Missile");
+
 
         //Blocks
+        add(BlockInit.POROUS_ROCK_BLOCK.get(), "Porous Rock");
         add(BlockInit.MAGNETITE_BLOCK.get(), "Magnetite");
         add(BlockInit.CHISELED_MAGNETITE_BLOCK.get(), "Chiseled Magnetite");
         add(BlockInit.POLISHED_MAGNETITE_BLOCK.get(), "Polished Magnetite");
