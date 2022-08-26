@@ -40,6 +40,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
 
         // Block Items
+        simpleBlockItem(BlockInit.POROUS_ROCK_BLOCK.get().asItem());
         simpleBlockItem(BlockInit.MAGNETITE_BLOCK.get().asItem());
         simpleBlockItem(BlockInit.MAGNETITE_BRICK_BLOCK.get().asItem());
         simpleBlockItem(BlockInit.MAGNETITE_BRICK_SLAB.get().asItem());
@@ -52,5 +53,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Simple Items
         oneLayerItem(ItemInit.WAYFINDER_ITEM.get());
+        oneLayerItem(ItemInit.DUNKLE_SHELL_ITEM.get());
+        oneLayerItem(ItemInit.VESSEL_ITEM.get());
+        oneLayerItem(ItemInit.MAGNETIC_BAND_ITEM.get());
+        oneLayerItem(ItemInit.MAGNETIC_MISSILE_ITEM.get());
     }
 }
