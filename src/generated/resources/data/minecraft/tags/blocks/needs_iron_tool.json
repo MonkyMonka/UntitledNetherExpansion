@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "untitlednetherexpansion:magnetite_block",
+    "untitlednetherexpansion:magnetite_brick_block",
+    "untitlednetherexpansion:magnetite_brick_slab",
+    "untitlednetherexpansion:magnetite_brick_stair",
+    "untitlednetherexpansion:polished_magnetite_block",
+    "untitlednetherexpansion:polished_magnetite_slab",
+    "untitlednetherexpansion:polished_magnetite_stair",
+    "untitlednetherexpansion:chiseled_magnetite_block"
+  ]
+}
