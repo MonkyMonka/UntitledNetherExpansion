@@ -33,6 +33,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(consumer, new ResourceLocation(UntitledNetherExpansion.MOD_ID,
                         ItemInit.WAYFINDER_ITEM.get().getRegistryName().getPath()));
 
+        ShapedRecipeBuilder.shaped(ItemInit.VESSEL_ITEM.get())
+                .define('d', ItemInit.DUNKLE_SHELL_ITEM.get().asItem())
+                .pattern("ddd").pattern("ddd").pattern("ddd")
+                .unlockedBy("has_" + ItemInit.DUNKLE_SHELL_ITEM.getId().getPath(), has(ItemInit.DUNKLE_SHELL_ITEM.get().asItem()))
+                .save(consumer, new ResourceLocation(UntitledNetherExpansion.MOD_ID,
+                        ItemInit.VESSEL_ITEM.get().getRegistryName().getPath()));
+
         // Shapeless Recipes
         ShapelessRecipeBuilder.shapeless(BlockInit.MAGNETITE_BLOCK.get().asItem(), 4)
                 .requires(Items.BASALT)
