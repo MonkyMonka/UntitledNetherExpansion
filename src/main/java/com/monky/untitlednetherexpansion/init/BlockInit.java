@@ -5,6 +5,7 @@ import com.google.common.base.Supplier;
 
 import com.monky.untitlednetherexpansion.UntitledNetherExpansion;
 import com.monky.untitlednetherexpansion.block.MagnetiteBlock;
+import com.monky.untitlednetherexpansion.block.PorousRockBlock;
 import com.monky.untitlednetherexpansion.block.WhiskerBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -21,6 +22,11 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
             UntitledNetherExpansion.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = ItemInit.ITEMS;
+
+    public static final RegistryObject<Block> POROUS_ROCK_BLOCK = register("porous_rock_block",
+            () -> new PorousRockBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
+                    .sound(SoundType.NETHERRACK).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(UntitledNetherExpansion.UNTITLEDNETHER_TAB)));
 
     public static final RegistryObject<Block> MAGNETITE_BLOCK = register("magnetite_block",
             () -> new MagnetiteBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(3.0f, 6.0f)
