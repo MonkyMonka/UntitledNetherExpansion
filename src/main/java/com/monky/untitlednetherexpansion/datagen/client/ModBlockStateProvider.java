@@ -68,6 +68,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        simpleBlock(BlockInit.POROUS_ROCK_BLOCK.get());
         simpleBlock(BlockInit.MAGNETITE_BLOCK.get());
         simpleBlock(BlockInit.CHISELED_MAGNETITE_BLOCK.get());
         simpleBlock(BlockInit.MAGNETITE_BRICK_BLOCK.get());
