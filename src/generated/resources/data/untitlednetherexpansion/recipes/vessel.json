@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ddd",
+    "ddd",
+    "ddd"
+  ],
+  "key": {
+    "d": {
+      "item": "untitlednetherexpansion:dunkle_shell"
+    }
+  },
+  "result": {
+    "item": "untitlednetherexpansion:vessel"
+  }
+}

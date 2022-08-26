@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "untitlednetherexpansion:vessel"
+    ]
+  },
+  "criteria": {
+    "has_dunkle_shell": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "untitlednetherexpansion:dunkle_shell"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "untitlednetherexpansion:vessel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dunkle_shell",
+      "has_the_recipe"
+    ]
+  ]
+}
