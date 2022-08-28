@@ -35,7 +35,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
         ShapedRecipeBuilder.shaped(ItemInit.VESSEL_ITEM.get())
                 .define('d', ItemInit.DUNKLE_SHELL_ITEM.get().asItem())
-                .pattern("ddd").pattern("ddd").pattern("ddd")
+                .pattern("ddd").pattern("d d").pattern("ddd")
                 .unlockedBy("has_" + ItemInit.DUNKLE_SHELL_ITEM.getId().getPath(), has(ItemInit.DUNKLE_SHELL_ITEM.get().asItem()))
                 .save(consumer, new ResourceLocation(UntitledNetherExpansion.MOD_ID,
                         ItemInit.VESSEL_ITEM.get().getRegistryName().getPath()));
