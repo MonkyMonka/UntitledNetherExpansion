@@ -1,8 +1,6 @@
 package com.monky.untitlednetherexpansion.init;
 
 import com.monky.untitlednetherexpansion.UntitledNetherExpansion;
-import java.util.function.Supplier;
-
 import com.monky.untitlednetherexpansion.item.MagneticBandItem;
 import com.monky.untitlednetherexpansion.item.MagneticMissileItem;
 import com.monky.untitlednetherexpansion.item.VesselItem;
@@ -13,8 +11,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.function.Supplier;
+
 
 public class ItemInit {
+
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
             UntitledNetherExpansion.MOD_ID);
 
@@ -37,3 +38,4 @@ public class ItemInit {
         return ITEMS.register(name, item);
     }
 }
+
