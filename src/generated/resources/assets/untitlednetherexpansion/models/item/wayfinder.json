@@ -2,5 +2,13 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "untitlednetherexpansion:item/wayfinder"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "untitlednetherexpansion:attunement": 1.0
+      },
+      "model": "untitlednetherexpansion:item/wayfinder_animation"
+    }
+  ]
 }
