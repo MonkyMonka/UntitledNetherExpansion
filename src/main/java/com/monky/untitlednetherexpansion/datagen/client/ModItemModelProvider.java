@@ -52,7 +52,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(BlockInit.WHISKER_BLOCK.get().asItem());
 
         // Simple Items
-        oneLayerItem(ItemInit.WAYFINDER_ITEM.get());
         oneLayerItem(ItemInit.DUNKLE_SHELL_ITEM.get());
         oneLayerItem(ItemInit.VESSEL_ITEM.get());
         oneLayerItem(ItemInit.MAGNETIC_BAND_ITEM.get());
