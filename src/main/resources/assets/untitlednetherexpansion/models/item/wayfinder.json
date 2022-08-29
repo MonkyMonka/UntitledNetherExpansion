@@ -1,0 +1,34 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "untitlednetherexpansion:item/wayfinder"
+  },
+  "overrides": [
+    { "predicate": { "angle": 0.000000, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_06" },
+    { "predicate": { "angle": 0.041666, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_05" },
+    { "predicate": { "angle": 0.083332, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_04" },
+    { "predicate": { "angle": 0.124998, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_03" },
+    { "predicate": { "angle": 0.166664, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_02" },
+    { "predicate": { "angle": 0.208330, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_01" },
+    { "predicate": { "angle": 0.249996, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_00" },
+    { "predicate": { "angle": 0.291662, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_23" },
+    { "predicate": { "angle": 0.333328, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_22" },
+    { "predicate": { "angle": 0.374994, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_21" },
+    { "predicate": { "angle": 0.416660, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_20" },
+    { "predicate": { "angle": 0.458326, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_19" },
+    { "predicate": { "angle": 0.499992, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_18" },
+    { "predicate": { "angle": 0.541658, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_17" },
+    { "predicate": { "angle": 0.583324, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_16" },
+    { "predicate": { "angle": 0.624990, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_15" },
+    { "predicate": { "angle": 0.666656, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_14" },
+    { "predicate": { "angle": 0.708322, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_13" },
+    { "predicate": { "angle": 0.749988, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_12" },
+    { "predicate": { "angle": 0.791654, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_11" },
+    { "predicate": { "angle": 0.833320, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_10" },
+    { "predicate": { "angle": 0.874986, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_09" },
+    { "predicate": { "angle": 0.916652, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_08" },
+    { "predicate": { "angle": 0.958318, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_07" },
+    { "predicate": { "angle": 0.999984, "untitlednetherexpansion:attunement": 1.0}, "model": "untitlednetherexpansion:item/wayfinder_06" }
+
+  ]
+}
