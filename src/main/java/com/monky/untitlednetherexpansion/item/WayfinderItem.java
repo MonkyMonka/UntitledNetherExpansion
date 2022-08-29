@@ -11,24 +11,26 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.game.ClientboundCustomSoundPacket;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.CompassItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.Nonnull;
 import java.util.List;
+import java.util.Optional;
 
 
 public class WayfinderItem extends CompassItem {
@@ -46,7 +48,6 @@ public class WayfinderItem extends CompassItem {
         }
         super.appendHoverText(stack, worldIn, tooltip, flagIn);
     }
-
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
@@ -102,7 +103,6 @@ public class WayfinderItem extends CompassItem {
         }
     }
 
-
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
@@ -123,6 +123,17 @@ public class WayfinderItem extends CompassItem {
         pCompoundTag.putBoolean("LodestoneTracked", true);
 
         }
+
+    @Nullable
+    public static CompoundTag getItemTag(@Nonnull ItemStack stack) {
+        return isLodestoneCompass(stack) ? stack.getTag() : null;
+    }
+
+    @javax.annotation.Nullable
+    public static String getDimension(@Nonnull ItemStack stack) {
+        CompoundTag tag = getItemTag(stack);
+        return (tag != null) ? tag.getString(TAG_LODESTONE_DIMENSION) : null;
+    }
 
     public String getDescriptionId(ItemStack p_40741_) {
         return isLodestoneCompass(p_40741_) ? "Attuned Wayfinder" : super.getDescriptionId(p_40741_);

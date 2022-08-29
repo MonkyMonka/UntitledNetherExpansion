@@ -3,6 +3,7 @@ package com.monky.untitlednetherexpansion;
 import com.monky.untitlednetherexpansion.init.BlockInit;
 import com.monky.untitlednetherexpansion.init.ItemInit;
 import com.monky.untitlednetherexpansion.init.SoundEventsInit;
+import com.monky.untitlednetherexpansion.item.WayfinderItemProperty;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -59,6 +60,9 @@ public class UntitledNetherExpansion {
                             return 0.0F;
                         }
                     });
+            ItemProperties.register(ItemInit.WAYFINDER_ITEM.get(),
+                    new ResourceLocation("angle"),
+                    new WayfinderItemProperty());
                     });
     }
 }
