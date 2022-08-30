@@ -27,6 +27,7 @@ public class ModEnUsProvider extends LanguageProvider {
         add(ItemInit.WAYFINDER_ITEM.get(), "Wayfinder");
         add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_unattuned.desc", "A non-attuned Wayfinder");
         add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_attuned.desc", "An attuned Wayfinder, Instantly teleport to the affixed destination upon consumption");
+        add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_uncharged", "Wayfinder has not been charged to full");
         add(ItemInit.DUNKLE_SHELL_ITEM.get(), "Dunkle Shell");
         add(ItemInit.VESSEL_ITEM.get(), "Vessel");
         add(ItemInit.MAGNETIC_BAND_ITEM.get(), "Magnetic Band");
@@ -47,8 +48,8 @@ public class ModEnUsProvider extends LanguageProvider {
 
         //Sounds
         addSubtitle("item", "wayfinder_charge", "Wayfinder is charged");
-        addSubtitle("item", "wayfinder_teleport_in", "Wayfinder is used to teleport the player");
-        addSubtitle("item", "wayfinder_teleport_out", "A Wayfinder is used to teleport a player nearby");
+        addSubtitle("item", "wayfinder_teleport_in", "Wayfinder used");
+        addSubtitle("item", "wayfinder_teleport_out", "Player teleports");
         addSubtitle("item", "wayfinder_lock", "Wayfinder locks onto Lodestone");
 
 
