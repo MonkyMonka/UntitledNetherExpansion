@@ -16,6 +16,7 @@
   "item.untitlednetherexpansion.wayfinder": "Wayfinder",
   "item.untitlednetherexpansion.wayfinder_attuned.desc": "An attuned Wayfinder, Instantly teleport to the affixed destination upon consumption",
   "item.untitlednetherexpansion.wayfinder_unattuned.desc": "A non-attuned Wayfinder",
+  "item.untitlednetherexpansion.wayfinder_uncharged": "Wayfinder has not been charged to full",
   "itemGroup.untitlednetherexpansion": "Untitled Nether Expansion Tab",
   "subtitles.item.wayfinder_charge": "Wayfinder is charged",
   "subtitles.item.wayfinder_lock": "Wayfinder locks onto Lodestone",
