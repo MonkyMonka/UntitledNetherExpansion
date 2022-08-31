@@ -53,6 +53,31 @@ public class WayfinderItem extends CompassItem {
     }
 
     @Override
+    public void inventoryTick(ItemStack pStack, Level pLevel, Entity entity, int itemSlot, boolean isSelected) {
+        if (!pLevel.isClientSide && entity instanceof ServerPlayer player) {
+            if (isLodestoneCompass(pStack)) {
+                CompoundTag compoundtag = pStack.getOrCreateTag();
+                if (compoundtag.contains("LodestoneTracked") && !compoundtag.getBoolean("LodestoneTracked")) {
+                    return;
+                }
+
+                Optional<ResourceKey<Level>> optional = getLodestoneDimension(compoundtag);
+                if (optional.isPresent() && optional.get() == pLevel.dimension() && compoundtag.contains("LodestonePos")) {
+                    BlockPos blockpos = NbtUtils.readBlockPos(compoundtag.getCompound("LodestonePos"));
+                    if (!pLevel.isInWorldBounds(blockpos) || !((ServerLevel)pLevel).getPoiManager().existsAtPosition(PoiType.LODESTONE, blockpos)) {
+                        compoundtag.remove("LodestonePos");
+                        compoundtag.remove("LodestoneTracked");
+                        compoundtag.remove("LodestoneDimension");
+                        player.displayClientMessage(new TranslatableComponent("item.untitlednetherexpansion.wayfinder_disattuned"), true);
+
+                    }
+                }
+            }
+
+        }
+    }
+
+    @Override
     public InteractionResult useOn(UseOnContext pContext) {
         BlockPos blockpos = pContext.getClickedPos();
         Level level = pContext.getLevel();
@@ -146,8 +171,8 @@ public class WayfinderItem extends CompassItem {
         return (tag != null) ? tag.getString(TAG_LODESTONE_DIMENSION) : null;
     }
 
-    public String getDescriptionId(ItemStack p_40741_) {
-        return isLodestoneCompass(p_40741_) ? "Attuned Wayfinder" : super.getDescriptionId(p_40741_);
+    public String getDescriptionId(ItemStack stack) {
+        return isLodestoneCompass(stack) ? "Attuned Wayfinder" : super.getDescriptionId(stack);
 
     }
 }
