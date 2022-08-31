@@ -11,13 +11,16 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.game.ClientboundCustomSoundPacket;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CompassItem;
 import net.minecraft.world.item.ItemStack;
@@ -25,12 +28,12 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 import java.util.List;
+import java.util.Optional;
 
 
 public class WayfinderItem extends CompassItem {
@@ -98,6 +101,7 @@ public class WayfinderItem extends CompassItem {
             player.connection.send(new ClientboundCustomSoundPacket(SoundEventsInit.WAYFINDER_TELEPORT_IN.get().getLocation(), SoundSource.PLAYERS, player.getPosition(1.0F), 0.5F, 1.0F ));
             player.awardStat(Stats.ITEM_USED.get(stack.getItem()));
             stack.shrink(1);
+            player.broadcastBreakEvent(entity.getUsedItemHand());
 
             player.playSound(SoundEventsInit.WAYFINDER_TELEPORT_OUT.get(), 0.5F, 1.0F);
         }
