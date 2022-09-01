@@ -143,7 +143,8 @@ public class WayfinderItem extends CompassItem {
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
-        if (isLodestoneCompass(itemStack) && getDimension(itemStack).equals(pPlayer.level.dimension())) {
+        CompoundTag compoundtag = itemStack.getOrCreateTag();
+        if (isLodestoneCompass(itemStack) && getLodestoneDimension(compoundtag).get() == pPlayer.level.dimension()) {
             pPlayer.startUsingItem(pUsedHand);
             pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEventsInit.WAYFINDER_CHARGE.get(), SoundSource.PLAYERS, 0.5F, 1.0F);
         } else {
