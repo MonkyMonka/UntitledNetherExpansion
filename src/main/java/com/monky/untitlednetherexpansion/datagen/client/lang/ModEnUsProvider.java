@@ -27,8 +27,8 @@ public class ModEnUsProvider extends LanguageProvider {
         add(ItemInit.WAYFINDER_ITEM.get(), "Wayfinder");
         add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_unattuned.desc", "A inert Wayfinder");
         add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_attuned.desc", "Instantly teleport to the linked Lodestone upon use");
-        add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_uncharged", "Wayfinder has not been charged to full");
-        add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_disattuned", "Linked Lodestone is missing or destroyed");
+        add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_uncharged", "Your wayfinder has not been charged to full");
+        add(ItemInit.WAYFINDER_ITEM.get().getDescriptionId() + "_disattuned", "Linked lodestone is missing or destroyed");
         add(ItemInit.DUNKLE_SHELL_ITEM.get(), "Dunkle Shell");
         add(ItemInit.VESSEL_ITEM.get(), "Vessel");
         add(ItemInit.MAGNETIC_BAND_ITEM.get(), "Magnetic Band");
